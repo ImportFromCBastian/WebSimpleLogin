@@ -1,10 +1,11 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import "../assets/index.css"
 
 export const Login = () => {
   
+  const navigate = useNavigate()
 
   const [credentials, setCredentials] = useState({
     username: "",
@@ -16,14 +17,11 @@ export const Login = () => {
       ...credentials,
       [e.target.name]: e.target.value,
     })
-
-    console.log(credentials)
-
   }
   const handleSubmit = (e) => {
     e.preventDefault()
     if( credentials.username === "unodostres" && credentials.password === "12345678")
-      console.log("Login successful")
+      navigate("/dashboard")
 
   }
 

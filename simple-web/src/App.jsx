@@ -1,7 +1,10 @@
 import './assets/index.css'
+import { BrowserRouter, Routes,Route } from 'react-router-dom'
+
 import { Login } from './components/Login'
 import { SignUp } from './components/SignUp';
-import { BrowserRouter, Routes,Route } from 'react-router-dom'
+import { Dashboard } from './components/Dashboard';
+
 
 
 
@@ -12,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login/>} /> 
         <Route path="/sign-up" element={<SignUp/>} /> 
-        <Route path="/sign-up" element={<Dashboard/>} /> 
+        <Route path="/dashboard" element={<Dashboard/>} /> 
       </Routes>
     </BrowserRouter>
     </>
